@@ -29,7 +29,7 @@ namespace LetterBot.Dialogs
                 var greetingList = r.ReadToEnd().Split(new String[] { Environment.NewLine }, StringSplitOptions.None);
                 var number = new Random().Next(0, greetingList.Length - 1);
 
-                message += greetingList[number] + " " + activity.Recipient + "," + Environment.NewLine + Environment.NewLine + Environment.NewLine;
+                message += greetingList[number] + "," + Environment.NewLine + Environment.NewLine + Environment.NewLine;
             }
 
             message += activity.Text + Environment.NewLine + Environment.NewLine;
@@ -39,7 +39,7 @@ namespace LetterBot.Dialogs
                 var closingList = r.ReadToEnd().Split(new String[] { Environment.NewLine }, StringSplitOptions.None);
                 var number = new Random().Next(0, closingList.Length - 1);
 
-                message += closingList[number] + "," + Environment.NewLine + Environment.NewLine + Environment.NewLine + activity.From;
+                message += closingList[number] + "," + Environment.NewLine + Environment.NewLine + Environment.NewLine;
             }
 
             // return our reply to the user
